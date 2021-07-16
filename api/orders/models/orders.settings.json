@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "Orders",
+  "info": {
+    "name": "Orders",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "orders"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Paid",
+        "Unpaid"
+      ]
+    },
+    "products": {
+      "collection": "products"
+    },
+    "Total": {
+      "type": "decimal"
+    },
+    "checkout_session": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text"
+    },
+    "city": {
+      "type": "string"
+    },
+    "district": {
+      "type": "string"
+    },
+    "post_code": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "Products",
+  "info": {
+    "name": "Products",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Title"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "meta_title": {
+      "type": "string"
+    },
+    "meta_description": {
+      "type": "string"
+    },
+    "category": {
+      "via": "products",
+      "model": "category"
+    },
+    "Featured": {
+      "type": "boolean"
+    },
+    "TopProduct": {
+      "type": "boolean"
+    },
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "size": {
+      "type": "integer",
+      "default": 35
+    },
+    "material": {
+      "type": "string",
+      "default": "Plywood"
+    },
+    "strings": {
+      "type": "string",
+      "default": "Copper Coated Steel String"
+    },
+    "brand": {
+      "type": "string",
+      "default": "Signature"
+    },
+    "type": {
+      "type": "string",
+      "default": "Acoustic"
+    }
+  }
+}
