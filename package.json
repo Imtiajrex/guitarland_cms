@@ -26,6 +26,7 @@
     "strapi-plugin-magic": "^0.9.0",
     "strapi-plugin-upload": "3.6.5",
     "strapi-plugin-users-permissions": "3.6.5",
+    "strapi-provider-upload-cloudinary": "^3.6.5",
     "strapi-utils": "3.6.5",
     "stripe": "^8.163.0"
   },
